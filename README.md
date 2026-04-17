@@ -6,15 +6,15 @@ Patagonia hosts Argentina's largest concentration of wind energy capacity (2+ GW
 
 ## Key Findings
 
-*[To be completed after analysis]*
+*To be completed after analysis*
 
 ## Data
-ERA5 Reanalysis (Copernicus Climate Data Store)
-	- Spatial domain: 38°S-47.5°S, 72°W-62°W 
+ERA5 Reanalysis (Copernicus Climate Data Store)   
+	- Spatial domain: 38°S-47.5°S, 72°W-62°W    
  	- Temporal domain: 1979-2025   
  	- Resolution: 0.25° monthly   
  	- Processing: Area weighted average across land grid cells within bounding box   
-SAM Index (British Antarctic Survey)
+SAM Index (British Antarctic Survey)   
 	- Southern Annular Mode (Marshall)    
 	- British Antarctic Survey    
 	- 1957-present     
@@ -26,6 +26,7 @@ IOD/DMI
 	-  Indian Ocean Dipole Mode Index    
 	-  NOAA PSL / BOM    
 	- 1870–present   
+	
 The SAM (Marshall station based index) is used rather than an ERA5 derived SAM to maintain independence between predictor and predictand datasets. The ONI is provided as a 3 month running mean. IOD inclusion is pending literature review.
 
 ## Methodology
