@@ -1,0 +1,51 @@
+name: patagonia-energy
+
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.11
+  - pip
+
+  # Core
+  - numpy
+  - pandas
+  - scipy
+
+  # Climate data
+  - cdsapi
+  - xarray
+  - netcdf4
+  - cfgrib
+  - dask
+
+  # Geospatial
+  - cartopy
+  - geopandas
+  - shapely
+  - regionmask
+
+  # Visualization
+  - matplotlib
+  - seaborn
+  - plotly
+  - folium
+
+  # ML
+  - scikit-learn
+  - xgboost
+  - shap
+
+  # Deep learning
+  - pytorch
+  - pip:
+      - tensorflow
+
+  # Jupyter
+  - jupyterlab
+  - ipywidgets
+
+  # Stats
+  - statsmodels

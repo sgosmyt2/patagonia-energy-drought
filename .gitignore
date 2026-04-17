@@ -1,0 +1,24 @@
+# Data
+data/raw/
+data/processed/*.nc
+*.nc
+
+# Keep CSVs
+# !data/processed/*.csv
+
+# Models
+models/*.pkl
+models/*.pt
+models/*.h5
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Environment
+.env
+
+# OS
+.DS_Store
+Thumbs.db
