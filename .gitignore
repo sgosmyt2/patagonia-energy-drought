@@ -6,11 +6,6 @@ data/processed/*.nc
 # Keep CSVs
 !data/processed/*.csv
 
-# Models
-models/*.pkl
-models/*.pt
-models/*.h5
-
 # Python
 __pycache__/
 *.pyc
@@ -22,3 +17,6 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
+# Settings json
+.vscode/settings.json
