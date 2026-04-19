@@ -41,7 +41,11 @@ Lag correlation analysis quantifies the relationship between each climate mode (
 
 ### Machine Learning Forecasting
 
-Four modelling paradigms are compared to determine which is most appropriate for climate teleconnection prediction:
+Four modelling paradigms are compared to determine which is most appropriate for climate teleconnection prediction:   
+	- ElasticNet   
+	- Random Forest   
+	- XGBoost   
+	- LSTM
 
 ## Notebooks
 1. Data Collection
