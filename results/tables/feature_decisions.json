@@ -1,0 +1,78 @@
+{
+  "primary_target": {
+    "variable": "whdi_3",
+    "lead_time": 3,
+    "justification": "No window overlap at 3 month lead."
+  },
+  "secondary_target": {
+    "variable": "whdi_6",
+    "lead_time": 3,
+    "justification": "Included for comparison, obviously has 3 months of overlap so needs to be included in analysis."
+  },
+  "features": {
+    "sam": {
+      "lags": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "role": "Primary compound predictor",
+      "justification": "Coherent negative correlation with WHDI3 peaking at lag 2, drives both wind and runoff in DJF/MAM. Sign reversal in JJA requires seasonal context.",
+      "key_seasons": [
+        "DJF",
+        "MAM"
+      ]
+    },
+    "oni": {
+      "lags": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "role": "Hydro specific predictor, seasonal context",
+      "justification": "Strong runoff signal in JJA (r=0.38) and SON (r=0.34) at lag 0. Wind signal only in MAM at lag 2. Lag 0-1 provides current state context.",
+      "key_seasons": [
+        "JJA",
+        "SON"
+      ]
+    },
+    "iod": {
+      "lags": [
+        2,
+        3,
+        4,
+        8,
+        9,
+        10,
+        11
+      ],
+      "role": "Long range hydro predictor via ENSO pathway",
+      "justification": "Strongest single teleconnection: IOD runoff in JJA (r=-0.40) at lag 3. Also significant at lags 8-11 as ENSO early warning.",
+      "key_seasons": [
+        "JJA"
+      ]
+    },
+    "season": {
+      "encoding": "one-hot",
+      "role": "Critical context for the models",
+      "justification": "SAM reverses sign between DJF and JJA. IOD only active in JJA. ONI strongest in SON. Without seasonal context, opposing signals cancel."
+    },
+    "local_condition": {
+      "variables": [
+        "whdi_3 at t, t-1, t-2",
+        "wind_std at t",
+        "runoff_std at t",
+        "snowmelt anomaly at t"
+      ],
+      "role": "Group B features for local only baseline comparison",
+      "justification": "Tests whether climate modes add skill beyond knowing current local conditions."
+    }
+  },
+  "notes": {
+    "sam_trend": "SAM trending positive there is potential non stationarity in teleconnection. Monitor walk forward CV for degrading skill.",
+    "iod_retention": "IOD retained despite long lags. Signal is physically explainable through IOD ENSO interaction and concentrated in runoff component as expected.",
+    "oni_wind": "ONI shows weak wind signal in MAM only. Not a compound driver but may contribute to seasonal model skill."
+  }
+}
