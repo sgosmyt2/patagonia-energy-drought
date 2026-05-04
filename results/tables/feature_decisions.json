@@ -74,10 +74,5 @@
     "sam_trend": "SAM trending positive there is potential non stationarity in teleconnection. Monitor walk forward CV for degrading skill.",
     "iod_retention": "IOD retained despite long lags. Signal is physically explainable through IOD ENSO interaction and concentrated in runoff component as expected.",
     "oni_wind": "ONI shows weak wind signal in MAM only. Not a compound driver but may contribute to seasonal model skill."
-  },
-  "hyperparameter_tuning": {
-    "method": "GridSearchCV with inner TimeSeriesSplit (3 folds)",
-    "justification": "Nested CV prevents information leakage between tuning and evaluation. Small grids focused on regularisation parameters most relevant to small datasets.",
-    "lstm_exception": "LSTM tuned via 3 predefined configurations rather than grid search due to computational cost and overfitting risk."
-}
+  }
 }
