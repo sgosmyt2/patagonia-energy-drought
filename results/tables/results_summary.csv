@@ -1,0 +1,21 @@
+Category,Result
+Drought Events,31
+Mean Drought Duration,2.71
+Maximum Drought Duration,11
+Most Severe Drought,2024-08-01
+Mean WHDI,-0.0
+Anomalous Months,28
+Strongest Climate Driver,oni
+Strongest Variable,whdi_3
+Best Lag,0
+Strongest Correlation,0.237
+Strongest Seasonal Signal,SON
+Seasonal Correlation,0.404
+Significant Relationships,49
+Temperature Trend,0.0168
+Wind Trend,0.001
+Runoff Trend,-0.0683
+Best Model,elasticnet
+Best R²,0.665
+Lowest RMSE,0.361
+Best Forecast Lead,1
