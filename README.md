@@ -10,7 +10,7 @@ Patagonia hosts Argentina's largest concentration of wind energy capacity (2+ GW
 
 An interactive spatial anomaly explorer is available below:
 
-[Open Interactive Composite Map](results/figures/composite_anomaly_map.html)
+[Open Interactive Composite Map](https://sgosmyt2.github.io/patagonia-energy-drought/composite_anomaly_map.html)
 
 The map allows exploration of:
 - Positive and negative SAM phases
